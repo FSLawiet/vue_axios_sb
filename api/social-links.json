@@ -1,0 +1,17 @@
+[
+  {
+    "label": "Instagram",
+    "icon": 0,
+    "link": "https://www.instagram.com/guiacurtamais"
+  },
+  {
+    "label": "Facebook",
+    "icon": 1,
+    "link": "https://www.facebook.com/curtamais/"
+  },
+  {
+    "label": "Twitter",
+    "icon": 2,
+    "link": "https://twitter.com/guiacurtamais"
+  }
+]
