@@ -15,6 +15,8 @@ import {
   faFacebook,
 } from "@fortawesome/free-brands-svg-icons";
 
+import './registerServiceWorker'
+
 library.add(faTwitter, faInstagram, faFacebook);
 
 createApp(App)
