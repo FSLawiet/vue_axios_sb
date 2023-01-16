@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Canal do YouTube",
+    "label": "youtube.com/@CurtaMaisCurtaMais",
+    "link": "https://youtube.com/@CurtaMaisCurtaMais"
+  },
+  {
+    "title": "Instagram",
+    "label": "instagram.com/guiacurtamais",
+    "link": "https://instagram.com/guiacurtamais"
+  },
+  {
+    "title": "Facebook",
+    "label": "facebook.com/curtamais",
+    "link": "https://facebook.com/curtamais"
+  },
+  {
+    "title": "Twitter",
+    "label": "twitter.com/guiacurtamais",
+    "link": "https://twitter.com/guiacurtamais"
+  },
+  {
+    "title": "E-mail",
+    "label": "editorial@curtamais.com.br",
+    "link": "mailto:editorial@curtamais.com.br"
+  }
+]
