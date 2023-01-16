@@ -1,33 +1,63 @@
 <template>
   <header>
     <nav class="container">
-      <a href="/">
-        <img src="../assets/img/logo.svg" alt="Curta Mais" id="logo" />
-      </a>
-      <!-- A trocar por ícone -->
+      <router-link to="/" alt="Curta Mais">
+        <!-- Trocar tag img por svg (Componentizar) -->
+        <PrimaryLogo id="logo" style="fill: orange" />
+      </router-link>
+      <!-- A trocar por ícone (Componentizar)-->
       <img
         src="https://raw.githubusercontent.com/william-costa/wdev-mock-site-resources/master/assets/images/menu.svg"
         alt="Menu"
         id="menu-button"
         @click="menuToggle"
       />
-      <!-- Refazer o modal -->
+      <!-- Refazer o modal (Componentizar)-->
       <div id="menu-modal-overlay" v-if="menuActive" @click="menuToggle"></div>
       <div id="menu-modal-items" :class="{ active: menuActive }">
-        <img src="../assets/img/logo.svg" alt="Curta Mais" id="menu-logo" />
+        <PrimaryLogo alt="Curta Mais" id="menu-logo" style="fill: orange" />
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/videos">Vídeos</a></li>
-          <li><a href="/sobre">Sobre</a></li>
-          <li><a href="/contato">Contato</a></li>
+          <li>
+            <router-link
+              to="/"
+              v-on="this.menuActive ? { click: menuToggle } : {}"
+              >Home</router-link
+            >
+          </li>
+          <li>
+            <router-link
+              to="/videos"
+              v-on="this.menuActive ? { click: menuToggle } : {}"
+              >Vídeos</router-link
+            >
+          </li>
+          <li>
+            <router-link
+              to="/sobre"
+              v-on="this.menuActive ? { click: menuToggle } : {}"
+              >Sobre</router-link
+            >
+          </li>
+          <li>
+            <router-link
+              to="/contato"
+              v-on="this.menuActive ? { click: menuToggle } : {}"
+              >Contato</router-link
+            >
+          </li>
         </ul>
       </div>
     </nav>
   </header>
 </template>
 <script>
+import PrimaryLogo from "./PrimaryLogo";
+
 export default {
   name: "AppHeader",
+  components: {
+    PrimaryLogo,
+  },
   data() {
     return {
       menuActive: false,
@@ -52,6 +82,8 @@ header {
 nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  height: 60px;
 }
 ul {
   list-style: none;
@@ -100,5 +132,29 @@ ul li a {
   width: 50px;
   margin-top: 30px;
   margin-bottom: 10px;
+}
+
+@media (min-width: 700px) {
+  #menu-button,
+  #menu-logo,
+  #menu-modal-overlay {
+    display: none;
+  }
+  #menu-modal-items {
+    display: flex;
+    position: static;
+    height: 60px;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+  }
+  ul {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  ul li {
+    margin: 0;
+  }
 }
 </style>

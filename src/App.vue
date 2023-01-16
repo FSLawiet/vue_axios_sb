@@ -1,8 +1,6 @@
 <template>
   <AppHeader />
-  <main>
-    <h1>COMEÇAMO</h1>
-  </main>
+  <router-view></router-view>
   <AppFooter />
 </template>
 
