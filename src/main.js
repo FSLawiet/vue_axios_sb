@@ -3,10 +3,6 @@ import router from "./router";
 import store from "./store";
 import App from "./App.vue";
 
-import dotenv from "dotenv";
-
-dotenv.config();
-
 /* import the fontawesome core */
 import { library } from "@fortawesome/fontawesome-svg-core";
 
